@@ -1,7 +1,0 @@
-{
-  "status": "ok",
-  "contract": "plaintext-static-v1",
-  "site": "public-web-acceptance",
-  "backendRequired": false,
-  "externalRuntimeDependencies": false
-}
