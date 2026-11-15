@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="公开网页部署模式的静态网站验收清单。">
+  <title>验收清单 · 原文发布验收站</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="36" height="36"><span>原文发布验收站</span></a>
+    <nav aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="guide.html" aria-current="page">验收清单</a>
+      <button class="theme-button" type="button" data-theme-toggle aria-pressed="false">切换夜色</button>
+    </nav>
+  </header>
+
+  <main id="main" class="document-page">
+    <p class="eyebrow">ACCEPTANCE CONTRACT</p>
+    <h1>完整静态网站验收清单</h1>
+    <p class="lede">这个页面本身也是验收对象：它能够打开，说明第二个 HTML 文件没有被删除、改名或转成密文。</p>
+
+    <section class="document-section" aria-labelledby="browser-checks">
+      <h2 id="browser-checks">浏览器行为</h2>
+      <ol class="check-list">
+        <li><strong>首页状态：</strong>JavaScript 项显示“运行正常”，静态 JSON 项显示“读取成功”。</li>
+        <li><strong>按钮交互：</strong>返回首页点击“运行交互自检”，计数与提示文字同步变化。</li>
+        <li><strong>主题切换：</strong>点击“切换夜色”，页面配色改变，脚本没有报错。</li>
+        <li><strong>页面导航：</strong>首页与本页可互相访问，自定义 404 页面可直接打开。</li>
+      </ol>
+    </section>
+
+    <section class="document-section" aria-labelledby="file-checks">
+      <h2 id="file-checks">文件与正文</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>必须保持的公开资源</caption>
+          <colgroup><col style="width:42%"><col style="width:24%"><col style="width:34%"></colgroup>
+          <thead><tr><th scope="col">路径</th><th scope="col">类型</th><th scope="col">验收方法</th></tr></thead>
+          <tbody>
+            <tr><td><code>index.html</code></td><td>HTML</td><td>公网首页与标题</td></tr>
+            <tr><td><code>guide.html</code></td><td>HTML</td><td>第二页面导航</td></tr>
+            <tr><td><code>404.html</code></td><td>HTML</td><td>直接访问与未知路径</td></tr>
+            <tr><td><code>assets/styles.css</code></td><td>CSS</td><td>HTTP 200 与原文字节</td></tr>
+            <tr><td><code>assets/app.js</code></td><td>JavaScript</td><td>交互与静态请求</td></tr>
+            <tr><td><code>assets/logo.svg</code></td><td>SVG</td><td>图标渲染与原文字节</td></tr>
+            <tr><td><code>assets/pixel-check.png</code></td><td>PNG</td><td>图片解码与 SHA-256</td></tr>
+            <tr><td><code>assets/health.json</code></td><td>JSON</td><td>fetch 内容与 HTTP 状态</td></tr>
+            <tr><td><code>docs/deployment-contract.txt</code></td><td>文本</td><td>子路径与原文字节</td></tr>
+            <tr><td><code>.nojekyll</code></td><td>空文件</td><td>存在且长度为 0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="document-section" aria-labelledby="runtime-status">
+      <h2 id="runtime-status">本页运行状态</h2>
+      <div class="inline-status">
+        <p>JavaScript：<strong data-js-status>等待脚本启动</strong></p>
+        <p>静态 JSON：<strong data-api-status>等待请求 health.json</strong></p>
+      </div>
+      <p><a class="primary-link" href="index.html">返回首页执行交互自检</a></p>
+    </section>
+  </main>
+
+  <footer><p>验收记录应以真实部署结果为准，本页不预设“已通过”。</p><a href="docs/deployment-contract.txt">查看纯文本契约</a></footer>
+</body>
+</html>
