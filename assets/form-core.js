@@ -63,11 +63,11 @@
     return lines.join('\n');
   }
 
-  function buildDingTalkPayload(input, config, submittedAt) {
+  function buildFeishuPayload(input, config, submittedAt) {
     const keyword = config && config.keyword;
     return {
-      msgtype: 'text',
-      text: { content: buildMessage(input, keyword, submittedAt) },
+      msg_type: 'text',
+      content: { text: buildMessage(input, keyword, submittedAt) },
     };
   }
 
@@ -78,6 +78,6 @@
     normalizeValues,
     validateValues,
     buildMessage,
-    buildDingTalkPayload,
+    buildFeishuPayload,
   });
 });

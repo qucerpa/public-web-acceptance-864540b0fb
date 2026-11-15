@@ -6,7 +6,7 @@
   <meta name="description" content="预约飞书采购与落地方案咨询，留下联系信息，由顾问跟进你的实际需求。">
   <meta name="theme-color" content="#12304a">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://open.feishu.cn; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>预约方案咨询｜企业数字化顾问</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
@@ -23,7 +23,7 @@
           <path d="M8 10.5h24v15H19l-7 5v-5H8z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
           <path d="m14 18 4 4 8-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span><strong>企业数字化顾问</strong><small>FEISHU SOLUTION</small></span>
+        <strong>企业数字化顾问</strong>
       </a>
       <nav class="header-nav" aria-label="页面导航">
         <a href="#process">服务流程</a>
@@ -42,64 +42,46 @@
           <h1>把方案讲清楚，<br>再开始下一步。</h1>
           <p class="hero-lead">无论你正在评估飞书、比较采购方案，还是希望改善现有使用方式，都可以从一次围绕真实需求的沟通开始。</p>
           <ol class="hero-steps" aria-label="咨询流程">
-            <li><span>01</span><div><strong>提交需求</strong><p>填写基本情况与当前问题</p></div></li>
-            <li><span>02</span><div><strong>顾问沟通</strong><p>围绕团队现状确认咨询目标</p></div></li>
-            <li><span>03</span><div><strong>明确方向</strong><p>讨论适合你的采购与落地思路</p></div></li>
+            <li><span>01</span><strong>提交需求</strong></li>
+            <li><span>02</span><strong>顾问沟通</strong></li>
+            <li><span>03</span><strong>明确方向</strong></li>
           </ol>
-          <p class="hero-note">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 7.8 7.5 9.5 4.3-1.7 7.5-4.9 7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.5 12 2.2 2.2 4.8-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            信息仅用于本次业务咨询联系
-          </p>
         </div>
 
         <div class="form-card">
-          <div class="form-heading">
-            <p class="form-kicker">BOOK A CONSULTATION</p>
-            <h2>预约方案咨询</h2>
-            <p>留下你的联系信息，顾问跟进</p>
-          </div>
-          <p class="required-note">带 <span aria-hidden="true">*</span> 为必填项，信息仅用于本次业务咨询联系。</p>
-          <p class="submission-notice" role="note"><strong>当前为表单预览：</strong>在线提交通道尚未启用，填写内容不会发送或保存。</p>
-          <noscript><p class="form-status status-error">当前浏览器未启用 JavaScript，暂时无法检查表单，请启用后重试。</p></noscript>
-
+          <div class="form-heading"><h2>预约方案咨询</h2></div>
+          <noscript><p class="form-status status-error">当前浏览器未启用 JavaScript，暂时无法提交，请启用后重试。</p></noscript>
           <form id="consultation-form" method="post" novalidate>
             <div class="honeypot" aria-hidden="true">
               <label for="website">请勿填写此项</label>
               <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
             </div>
-
             <div class="form-grid">
               <div class="field">
                 <label for="name">姓名 <span class="required" aria-hidden="true">*</span></label>
                 <input id="name" name="name" type="text" maxlength="40" autocomplete="name" placeholder="请输入你的姓名" required aria-describedby="name-error">
                 <p class="field-error" id="name-error"></p>
               </div>
-
               <div class="field">
                 <label for="company">公司名称 <span class="required" aria-hidden="true">*</span></label>
                 <input id="company" name="company" type="text" maxlength="100" autocomplete="organization" placeholder="请输入公司或团队名称" required aria-describedby="company-error">
                 <p class="field-error" id="company-error"></p>
               </div>
-
               <div class="field">
                 <label for="contact">联系方式 <span class="required" aria-hidden="true">*</span></label>
-                <input id="contact" name="contact" type="text" maxlength="80" autocomplete="tel" placeholder="手机号、邮箱或其他有效联系方式" required aria-describedby="contact-hint contact-error">
-                <p class="field-hint" id="contact-hint">请填写顾问可以联系到你的方式</p>
+                <input id="contact" name="contact" type="text" maxlength="80" autocomplete="tel" placeholder="手机号、邮箱或其他有效联系方式" required aria-describedby="contact-error">
                 <p class="field-error" id="contact-error"></p>
               </div>
-
               <div class="field">
                 <label for="position">职位 <span class="required" aria-hidden="true">*</span></label>
                 <input id="position" name="position" type="text" maxlength="60" autocomplete="organization-title" placeholder="例如：行政负责人、IT 经理" required aria-describedby="position-error">
                 <p class="field-error" id="position-error"></p>
               </div>
-
               <div class="field">
                 <label for="city">所在城市 <span class="required" aria-hidden="true">*</span></label>
                 <input id="city" name="city" type="text" maxlength="60" autocomplete="address-level2" placeholder="例如：南京" required aria-describedby="city-error">
                 <p class="field-error" id="city-error"></p>
               </div>
-
               <div class="field">
                 <label for="feishu-status">是否已采购飞书 <span class="required" aria-hidden="true">*</span></label>
                 <div class="select-wrap">
@@ -114,21 +96,17 @@
                 </div>
                 <p class="field-error" id="feishuStatus-error"></p>
               </div>
-
               <div class="field field-full">
                 <div class="label-row">
                   <label for="description">需求描述</label>
                   <span id="description-count" aria-live="off">0 / 1000</span>
                 </div>
-                <textarea id="description" name="description" rows="5" maxlength="1000" placeholder="例如：团队规模、目前使用的工具、希望解决的问题或想了解的服务……" aria-describedby="description-hint description-error"></textarea>
-                <p class="field-hint" id="description-hint">请勿填写密码、身份证号等敏感信息。</p>
+                <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="请简要描述你的需求" aria-describedby="description-error"></textarea>
                 <p class="field-error" id="description-error"></p>
               </div>
             </div>
-
-            <p class="submit-consent">当前仅检查填写完整性，不会发送或保存任何内容。</p>
             <button class="submit-button" id="submit-button" type="submit">
-              <span class="button-label">检查填写内容</span>
+              <span class="button-label">提交咨询需求</span>
               <span class="button-loading" aria-hidden="true"><i></i>正在提交</span>
               <svg class="button-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
@@ -143,22 +121,18 @@
         <div class="section-heading">
           <p class="eyebrow"><span></span> 咨询沟通重点</p>
           <h2>一次咨询，聚焦三件事</h2>
-          <p>不预设复杂方案，先了解你的实际情况，再讨论适合的下一步。</p>
         </div>
         <div class="process-grid">
-          <article><span class="process-number">01</span><h3>现状梳理</h3><p>了解团队规模、现有工具与协作方式，明确最需要解决的问题。</p></article>
-          <article><span class="process-number">02</span><h3>方案讨论</h3><p>围绕你的使用目标沟通功能、采购选择和实施路径。</p></article>
-          <article><span class="process-number">03</span><h3>落地建议</h3><p>结合实际条件讨论部署、培训与后续推广的关注点。</p></article>
+          <article><span class="process-number">01</span><h3>现状梳理</h3></article>
+          <article><span class="process-number">02</span><h3>方案讨论</h3></article>
+          <article><span class="process-number">03</span><h3>落地建议</h3></article>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-inner">
-      <p>企业数字化顾问 · 预约方案咨询</p>
-      <p>当前仅提供表单展示与校验，不会发送或保存填写内容。</p>
-    </div>
+    <div class="shell footer-inner"><p>企业数字化顾问 · 预约方案咨询</p></div>
   </footer>
 </body>
 </html>
